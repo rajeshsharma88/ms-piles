@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>ऑर्डर कन्फर्मेशन | Aarogya India 3A Piles Kit</title>
+  <meta name="description" content="Aarogya India 3A Piles Kit - आपकी बुकिंग सफलतापूर्वक स्वीकार कर ली गई है।" />
+  
+  <meta name="theme-color" content="#0b582c" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-dark-green: #0b582c;
+      --primary-green: #11733c;
+      --accent-light-green: #e6f5ea;
+      --accent-gold: #e2ab24;
+      --accent-maroon: #8f182b;
+      --bg-cream: #f4f8f4;
+      --text-dark: #1b261d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ebf5ed;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(132, 204, 142, 0.18) 0%, transparent 40%),
+        radial-gradient(circle at 90% 15%, rgba(132, 204, 142, 0.22) 0%, transparent 45%),
+        linear-gradient(180deg, #f0f7f2 0%, #e8f3ea 100%);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Strip */
+    .top-strip {
+      background: #11361c;
+      color: #e2cf86;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 10px;
+      text-align: center;
+      letter-spacing: 0.3px;
+      line-height: 1.35;
+    }
+    .top-strip span {
+      color: #ffffff;
+    }
+
+    /* Page Wrapper with centered container */
+    .thankyou-master-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 16px 40px;
+    }
+
+    /* Header */
+    .header-nav {
+      padding: 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .header-logo {
+      height: 42px;
+      width: auto;
+      max-width: 170px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      background: transparent;
+    }
+    .header-helpline-btn {
+      background: #0b582c;
+      color: #ffffff !important;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 7px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(11, 88, 44, 0.25);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .header-helpline-btn:hover {
+      background: #084321;
+    }
+
+    /* Hero Checkmark & Confirmation */
+    .hero-confirmation {
+      text-align: center;
+      padding: 12px 0 20px;
+      position: relative;
+    }
+    .hero-check-circle {
+      width: 68px;
+      height: 68px;
+      background: #15733f;
+      color: #ffffff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      box-shadow: 0 8px 20px rgba(21, 115, 63, 0.32);
+      border: 3px solid #ffffff;
+      margin-bottom: 10px;
+      animation: popCheck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes popCheck {
+      0% { transform: scale(0); }
+      70% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    .hero-greeting {
+      font-size: clamp(20px, 3.2vw, 28px);
+      font-weight: 900;
+      color: #0b582c;
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+    .hero-greeting .cust-name {
+      color: #0b582c;
+    }
+    .hero-subtext {
+      font-size: 14px;
+      color: #3b4e3f;
+      margin-bottom: 4px;
+      line-height: 1.45;
+    }
+    .hero-subtext-2 {
+      font-size: 13px;
+      color: #556858;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .order-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ddf2e2;
+      border: 1.5px solid #a4e1b2;
+      color: #0b582c;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 12.5px;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(11, 88, 44, 0.08);
+      max-width: 100%;
+    }
+
+    /* Common Card Styling */
+    .master-card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1.5px solid #dceed0;
+      box-shadow: 0 6px 20px rgba(11, 88, 44, 0.05);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    /* Card 1: Product Showcase */
+    .card-product-header {
+      padding: 14px 18px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #edf4ee;
+      gap: 8px;
+    }
+    .card-product-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #17241a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+    }
+    .card-product-title i {
+      color: #0b582c;
+      font-size: 18px;
+    }
+    .badge-safe {
+      background: #e8f7ec;
+      color: #0b582c;
+      border: 1px solid #b6e6c1;
+      padding: 4px 10px;
+      border-radius: 30px;
+      font-size: 11.5px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+
+    .card-product-body {
+      padding: 16px;
+    }
+
+    /* Main Poster container */
+    .poster-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e1ebe2;
+      background: #000;
+      margin-bottom: 16px;
+    }
+    .poster-tag-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: #0b582c;
+      color: #ffffff;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 30px;
+      z-index: 2;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+    .poster-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* 4 Botanical Ingredients */
+    .botanical-section-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #1b261d;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .botanical-section-title i {
+      color: #0b582c;
+    }
+
+    .botanical-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .botanical-tile {
+      background: #f8faf8;
+      border: 1.5px solid #e3ede4;
+      border-radius: 10px;
+      padding: 8px 4px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .botanical-tile:hover {
+      border-color: #0b582c;
+      background: #eef7ee;
+    }
+    .botanical-tile img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      margin-bottom: 4px;
+    }
+    .botanical-tile span {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #1b261d;
+    }
+
+    /* Discreet packing bar inside card */
+    .discreet-pack-strip {
+      background: #f7faf8;
+      border: 1.5px solid #dceed0;
+      border-radius: 12px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .discreet-pack-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .discreet-pack-left i {
+      font-size: 24px;
+      color: #0b582c;
+      flex-shrink: 0;
+    }
+    .discreet-pack-left h5 {
+      font-size: 13px;
+      font-weight: 800;
+      color: #17241a;
+      margin-bottom: 2px;
+    }
+    .discreet-pack-left p {
+      font-size: 11.5px;
+      color: #556858;
+      margin-bottom: 0;
+      line-height: 1.35;
+    }
+    .discreet-box-thumb {
+      width: 60px;
+      height: 50px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    /* Card 2: Digital Receipt */
+    .receipt-green-header {
+      background: #0b582c;
+      color: #ffffff;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .receipt-green-header h4 {
+      font-size: 15px;
+      font-weight: 800;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .order-id-pill {
+      background: #15733f;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 3px 10px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .receipt-table-body {
+      padding: 14px 18px;
+    }
+    .receipt-item-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 0;
+      border-bottom: 1px dashed #e2ece3;
+      font-size: 13.5px;
+      gap: 8px;
+    }
+    .receipt-item-line:last-child {
+      border-bottom: none;
+    }
+    .receipt-item-line .label {
+      color: #4a5c4e;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .receipt-item-line .value {
+      font-weight: 800;
+      color: #17241a;
+      text-align: right;
+    }
+    .receipt-item-line .val-product {
+      color: #0b582c;
+      font-weight: 800;
+    }
+    .pill-cod {
+      background: #fff8e6;
+      color: #8f6900;
+      border: 1px solid #fce39f;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .pill-free-delivery {
+      background: #e8f7ec;
+      color: #0b582c;
+      border: 1px solid #b6e6c1;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    /* Priority Doctor Helpline Box inside Card 2 */
+    .dr-helpline-card {
+      background: #fffbf4;
+      border: 1.5px solid #fde7c8;
+      border-radius: 14px;
+      padding: 14px;
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .dr-helpline-content {
+      flex: 1;
+    }
+    .dr-helpline-heading {
+      color: #d9381e;
+      font-size: 14.5px;
+      font-weight: 900;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dr-helpline-desc {
+      font-size: 12px;
+      color: #5f4a39;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .btn-call-doctor-now {
+      background: #0b582c;
+      color: #ffffff !important;
+      font-size: 13.5px;
+      font-weight: 800;
+      padding: 9px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(11, 88, 44, 0.28);
+      transition: all 0.2s ease;
+    }
+    .btn-call-doctor-now:hover {
+      background: #084321;
+    }
+    .dr-avatar-photo {
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+      flex-shrink: 0;
+    }
+
+    /* Section 3: Next 3 Steps */
+    .next-steps-section {
+      text-align: center;
+      margin: 26px 0;
+    }
+    .pill-step-tag {
+      background: #ddf2e2;
+      border: 1px solid #a4e1b2;
+      color: #0b582c;
+      padding: 3px 12px;
+      border-radius: 30px;
+      font-size: 11.5px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+    .next-steps-heading {
+      font-size: 20px;
+      font-weight: 900;
+      color: #17241a;
+      margin-bottom: 4px;
+    }
+    .next-steps-subtitle {
+      font-size: 12.5px;
+      color: #556858;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .steps-horizontal-wrapper {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 10px;
+      position: relative;
+    }
+    .step-box-item {
+      background: #ffffff;
+      border: 1.5px solid #dceed0;
+      border-radius: 14px;
+      padding: 16px 12px;
+      flex: 1;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(11, 88, 44, 0.04);
+    }
+    .step-badge-top {
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0b582c;
+      color: #ffffff;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+    .step-icon-round {
+      width: 44px;
+      height: 44px;
+      background: #eef7ee;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 6px auto 8px;
+      font-size: 20px;
+      color: #0b582c;
+    }
+    .step-box-item h5 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #17241a;
+      margin-bottom: 4px;
+    }
+    .step-box-item p {
+      font-size: 11.5px;
+      color: #556858;
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+    .steps-connector-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0b582c;
+      font-size: 16px;
+      opacity: 0.6;
+    }
+
+    /* Section 4: Ayurvedic Care Tips (Do's & Don'ts) */
+    .care-rules-card {
+      background: #ffffff;
+      border: 1.5px solid #dceed0;
+      border-radius: 16px;
+      padding: 18px 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(11, 88, 44, 0.05);
+    }
+    .care-rules-header {
+      font-size: 15px;
+      font-weight: 800;
+      color: #17241a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .care-rules-header i {
+      color: #d9381e;
+      font-size: 16px;
+    }
+
+    .care-columns-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .care-do-box {
+      background: #f4fbf5;
+      border: 1.5px solid #b6e6c1;
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .care-dont-box {
+      background: #fff6f6;
+      border: 1.5px solid #f8c8c8;
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .care-box-title {
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .care-do-box .care-box-title {
+      color: #0b582c;
+    }
+    .care-dont-box .care-box-title {
+      color: #c92a2a;
+    }
+    .care-list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      font-size: 11.5px;
+      color: #3b4e3f;
+    }
+    .care-list li {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      line-height: 1.35;
+    }
+    .care-list li:last-child {
+      margin-bottom: 0;
+    }
+    .care-list li i {
+      margin-top: 1px;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    .care-do-box .care-list li i {
+      color: #0b582c;
+    }
+    .care-dont-box .care-list li i {
+      color: #c92a2a;
+    }
+
+    /* Section 5: Trust Certifications */
+    .trust-cert-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .trust-cert-item {
+      background: #ffffff;
+      border: 1.5px solid #dceed0;
+      border-radius: 10px;
+      padding: 8px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(11, 88, 44, 0.04);
+    }
+    .trust-cert-item i {
+      font-size: 20px;
+      color: #0b582c;
+    }
+    .trust-cert-item span {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #17241a;
+      line-height: 1.15;
+    }
+
+    /* Back to Main Page Button */
+    .btn-return-landing {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #ffffff;
+      color: #0b582c;
+      border: 1.5px solid #0b582c;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 10px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(11, 88, 44, 0.08);
+      margin-bottom: 18px;
+    }
+    .btn-return-landing:hover {
+      background: #0b582c;
+      color: #ffffff;
+    }
+
+    /* Footer */
+    .page-footer-strip {
+      text-align: center;
+      font-size: 11.5px;
+      color: #556858;
+      border-top: 1px solid #dceed0;
+      padding-top: 12px;
+    }
+    .page-footer-strip p {
+      margin-bottom: 3px;
+    }
+
+    /* ========================================================= */
+    /* 📱 PHONE VIEW RESPONSIVE STYLES (max-width: 600px) */
+    /* ========================================================= */
+    @media (max-width: 600px) {
+      .top-strip {
+        font-size: 10.5px;
+        padding: 5px 6px;
+      }
+
+      .thankyou-master-container {
+        padding: 0 12px 35px;
+      }
+
+      .header-nav {
+        padding: 10px 0;
+      }
+      .header-logo {
+        height: 36px;
+        max-width: 135px;
+      }
+      .header-helpline-btn {
+        font-size: 11.5px;
+        padding: 6px 12px;
+        gap: 4px;
+      }
+
+      .hero-confirmation {
+        padding: 8px 0 16px;
+      }
+      .hero-check-circle {
+        width: 58px;
+        height: 58px;
+        font-size: 30px;
+        margin-bottom: 8px;
+      }
+      .hero-greeting {
+        font-size: 21px;
+      }
+      .hero-subtext {
+        font-size: 12.5px;
+      }
+      .hero-subtext-2 {
+        font-size: 11.5px;
+        margin-bottom: 10px;
+      }
+      .order-status-badge {
+        font-size: 11px;
+        padding: 5px 12px;
+      }
+
+      .card-product-header {
+        padding: 12px 14px 10px;
+      }
+      .card-product-title {
+        font-size: 14.5px;
+      }
+      .card-product-body {
+        padding: 12px;
+      }
+
+      .botanical-grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+      }
+      .botanical-tile {
+        padding: 6px 2px;
+      }
+      .botanical-tile img {
+        width: 38px;
+        height: 38px;
+      }
+      .botanical-tile span {
+        font-size: 10.5px;
+      }
+
+      .discreet-pack-strip {
+        padding: 8px 10px;
+      }
+      .discreet-pack-left i {
+        font-size: 20px;
+      }
+      .discreet-pack-left h5 {
+        font-size: 12px;
+      }
+      .discreet-pack-left p {
+        font-size: 10.5px;
+      }
+      .discreet-box-thumb {
+        width: 48px;
+        height: 40px;
+      }
+
+      .receipt-green-header {
+        padding: 10px 14px;
+      }
+      .receipt-green-header h4 {
+        font-size: 13.5px;
+      }
+      .order-id-pill {
+        font-size: 11px;
+        padding: 2px 8px;
+      }
+      .receipt-table-body {
+        padding: 10px 14px;
+      }
+      .receipt-item-line {
+        font-size: 12.5px;
+        padding: 8px 0;
+      }
+
+      /* Doctor Helpline on Phone */
+      .dr-helpline-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        gap: 10px;
+      }
+      .dr-helpline-heading {
+        justify-content: center;
+        font-size: 13.5px;
+      }
+      .dr-helpline-desc {
+        font-size: 11.5px;
+        margin-bottom: 8px;
+      }
+      .btn-call-doctor-now {
+        font-size: 12.5px;
+        padding: 8px 14px;
+        width: 100%;
+      }
+      .dr-avatar-photo {
+        width: 75px;
+        height: 75px;
+        order: -1;
+      }
+
+      /* Next 3 steps on Phone */
+      .next-steps-heading {
+        font-size: 18px;
+      }
+      .next-steps-subtitle {
+        font-size: 11.5px;
+        margin-bottom: 12px;
+      }
+      .steps-horizontal-wrapper {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .steps-connector-arrow {
+        transform: rotate(90deg);
+        margin: -2px 0;
+        font-size: 14px;
+      }
+      .step-box-item {
+        padding: 12px 10px;
+      }
+      .step-box-item h5 {
+        font-size: 13px;
+      }
+      .step-box-item p {
+        font-size: 11px;
+      }
+
+      /* Care rules on Phone */
+      .care-rules-card {
+        padding: 14px 12px;
+      }
+      .care-rules-header {
+        font-size: 13.5px;
+        margin-bottom: 10px;
+      }
+      .care-columns-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .care-do-box, .care-dont-box {
+        padding: 10px;
+      }
+      .care-box-title {
+        font-size: 12px;
+      }
+      .care-list {
+        font-size: 11px;
+      }
+
+      /* Trust Grid on Phone */
+      .trust-cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+      }
+      .trust-cert-item {
+        padding: 6px 4px;
+      }
+      .trust-cert-item i {
+        font-size: 17px;
+      }
+      .trust-cert-item span {
+        font-size: 10.5px;
+      }
+
+      .btn-return-landing {
+        font-size: 13px;
+        padding: 8px 16px;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-strip">
+    🌾 Aarogya India: <span>100% प्रमाणित आयुर्वेदिक फॉर्मूला • शुद्ध • सुरक्षित • प्राकृतिक • स्वस्थ जीवन के लिए</span> 🌾
+  </div>
+
+  <div class="thankyou-master-container">
+
+    <!-- Header -->
+    <header class="header-nav">
+      <a href="index.html">
+        <img src="assets/images/logo.png" class="header-logo" alt="Aarogya India Logo" />
+      </a>
+      <a href="tel:9319719544" class="header-helpline-btn">
+        <i class="bi bi-telephone-fill"></i>
+        <span>हेल्पलाइन: +91 9319719544</span>
+      </a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-confirmation">
+      <!-- Checkmark circle -->
+      <div class="hero-check-circle">
+        <i class="bi bi-check-lg"></i>
+      </div>
+
+      <h1 class="hero-greeting">
+        बधाई हो, <span class="cust-name" id="displayCustName">Chandra bhushan Kumar</span> जी! 🎉
+      </h1>
+      
+      <p class="hero-subtext">
+        आपकी <strong>Aarogya India 3A Piles Kit</strong> का ऑर्डर सफलतापूर्वक स्वीकार कर लिया गया है।
+      </p>
+      <p class="hero-subtext-2">
+        हमारे आयुर्वेदिक विशेषज्ञ जल्द ही आपसे संपर्क करेंगे।
+      </p>
+
+      <div class="order-status-badge">
+        <i class="bi bi-truck"></i>
+        <span>ऑर्डर स्टेटस: प्रक्रिया में है (Order Under Verification)</span>
+      </div>
+    </section>
+
+    <!-- Card 1: आपका बुक किया गया प्रोडक्ट -->
+    <div class="master-card">
+      <div class="card-product-header">
+        <h3 class="card-product-title">
+          <i class="bi bi-box-seam"></i> आपका बुक किया गया प्रोडक्ट
+        </h3>
+        <span class="badge-safe">
+          <i class="bi bi-shield-fill-check"></i> 100% सुरक्षित
+        </span>
+      </div>
+
+      <div class="card-product-body">
+        <!-- Main Product Infographic Poster -->
+        <div class="poster-wrap">
+          <span class="poster-tag-badge">
+            🌿 प्राकृतिक किट
+          </span>
+          <img src="assets/images/shero_visual.png" class="poster-img" alt="Aarogya India 3A Piles Kit" />
+        </div>
+
+        <!-- 4 Natural Herbs -->
+        <div class="botanical-section-title">
+          <i class="bi bi-flower1"></i> मुख्य प्राकृतिक जड़ी-बूटियां:
+        </div>
+
+        <div class="botanical-grid-4">
+          <div class="botanical-tile">
+            <img src="assets/images/triphala.webp" alt="त्रिफला" />
+            <span>त्रिफला</span>
+          </div>
+          <div class="botanical-tile">
+            <img src="assets/images/Haritaki.webp" alt="हरिताकी" />
+            <span>हरिताकी</span>
+          </div>
+          <div class="botanical-tile">
+            <img src="assets/images/Nagesar.webp" alt="नागकेसर" />
+            <span>नागकेसर</span>
+          </div>
+          <div class="botanical-tile">
+            <img src="assets/images/herbal-blend.webp" alt="हरेड़ बहेड़ा" />
+            <span>हरेड़ बहेड़ा</span>
+          </div>
+        </div>
+
+        <!-- Discreet Packing Strip inside Card 1 -->
+        <div class="discreet-pack-strip">
+          <div class="discreet-pack-left">
+            <i class="bi bi-shield-lock-fill"></i>
+            <div>
+              <h5>100% गोपनीय व सीलबंद पैकिंग (Discreet Packing)</h5>
+              <p>पार्सल के बाहर किसी भी तरह का प्रोडक्ट नाम नहीं लिखा रहता है।</p>
+            </div>
+          </div>
+          <img src="assets/images/discreet_parcel_box.jpg" class="discreet-box-thumb" alt="Discreet Packing" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: डिजिटल बुकिंग रसीद (Booking Receipt) -->
+    <div class="master-card">
+      <div class="receipt-green-header">
+        <h4>
+          <i class="bi bi-receipt"></i> डिजिटल बुकिंग रसीद (Booking Receipt)
+        </h4>
+        <span class="order-id-pill" id="displayOrderId">
+          ORDER ID: #AI-158241
+        </span>
+      </div>
+
+      <div class="receipt-table-body">
+        <div class="receipt-item-line">
+          <span class="label"><i class="bi bi-box-seam text-success"></i> प्रोडक्ट:</span>
+          <span class="value val-product">Aarogya India 3A Piles Kit</span>
+        </div>
+
+        <div class="receipt-item-line">
+          <span class="label"><i class="bi bi-person-fill text-success"></i> ग्राहक का नाम:</span>
+          <span class="value" id="displayCustNameReceipt">Chandra bhushan Kumar</span>
+        </div>
+
+        <div class="receipt-item-line">
+          <span class="label"><i class="bi bi-telephone-fill text-success"></i> मोबाइल नंबर:</span>
+          <span class="value" id="displayCustPhoneReceipt">+91 6987654678</span>
+        </div>
+
+        <div class="receipt-item-line">
+          <span class="label"><i class="bi bi-credit-card text-success"></i> भुगतान विधि:</span>
+          <span class="value"><span class="pill-cod"><i class="bi bi-cash me-1"></i> Cash on Delivery</span></span>
+        </div>
+
+        <div class="receipt-item-line">
+          <span class="label"><i class="bi bi-truck text-success"></i> डिलीवरी शुल्क:</span>
+          <span class="value"><span class="pill-free-delivery"><i class="bi bi-truck me-1"></i> मुफ़्त (Free Delivery)</span></span>
+        </div>
+
+        <div class="receipt-item-line">
+          <span class="label"><i class="bi bi-hourglass-split text-success"></i> डिलीवरी समय:</span>
+          <span class="value">2 से 4 कार्य दिवस</span>
+        </div>
+
+        <!-- Priority Doctor Helpline Box -->
+        <div class="dr-helpline-card">
+          <div class="dr-helpline-content">
+            <div class="dr-helpline-heading">
+              <i class="bi bi-plus-circle-fill"></i> Priority Doctor Helpline
+            </div>
+            <p class="dr-helpline-desc">
+              क्या आपको दर्द, जलन या खून आ रहा है? अनुभवी चिकित्सक से सलाह लें और सही आयुर्वेदिक मार्गदर्शन पाएं।
+            </p>
+            <a href="tel:9319719544" class="btn-call-doctor-now">
+              <i class="bi bi-telephone-fill"></i> अभी डॉक्टर से बात करें (+91 9319719544)
+            </a>
+          </div>
+          <img src="assets/images/doctor_consultation.jpg" class="dr-avatar-photo" alt="Doctor Consultation" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: आगे क्या होगा? (Next 3 Steps) -->
+    <section class="next-steps-section">
+      <div class="pill-step-tag">
+        <i class="bi bi-check-circle-fill"></i> अगला क्या होगा?
+      </div>
+      <h3 class="next-steps-heading">आगे क्या होगा? (Next 3 Steps)</h3>
+      <p class="next-steps-subtitle">आपकी सुविधा और 100% गोपनीयता के लिए हमारा व्यवस्थित डिलीवरी प्रोसेस:</p>
+
+      <div class="steps-horizontal-wrapper">
+        <!-- Step 1 -->
+        <div class="step-box-item">
+          <span class="step-badge-top">स्टेप 1</span>
+          <div class="step-icon-round">
+            <i class="bi bi-person-check-fill"></i>
+          </div>
+          <h5>डॉक्टर वेरिफिकेशन कॉल</h5>
+          <p>हमारे विशेषज्ञ डॉक्टर 10 से 15 मिनट में आपको कॉल करेंगे और आपके लक्षणों के अनुसार सही सलाह देंगे।</p>
+        </div>
+
+        <div class="steps-connector-arrow">
+          <i class="bi bi-chevron-right"></i>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-box-item">
+          <span class="step-badge-top">स्टेप 2</span>
+          <div class="step-icon-round">
+            <i class="bi bi-truck"></i>
+          </div>
+          <h5>गोपनीय पैकिंग</h5>
+          <p>दवा को सादे, सुरक्षित और सीलबंद बॉक्स में पैक किया जाता है ताकि आपकी गोपनीयता 100% सुरक्षित रहे।</p>
+        </div>
+
+        <div class="steps-connector-arrow">
+          <i class="bi bi-chevron-right"></i>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-box-item">
+          <span class="step-badge-top">स्टेप 3</span>
+          <div class="step-icon-round">
+            <i class="bi bi-box-seam-fill"></i>
+          </div>
+          <h5>डिस्क्रीट डिलीवरी व कैश पेमेंट</h5>
+          <p>कूरियर बॉय आपके पते पर पहुंचेगा। पार्सल दवा का नाम बिना किसी निशान के (COD) डिलीवर होगा।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: डॉक्टर की विशेष सलाह: पाइल्स (बवासीर) से जल्द आराम के लिए नियम -->
+    <div class="care-rules-card">
+      <div class="care-rules-header">
+        <i class="bi bi-plus-circle-fill"></i> डॉक्टर की विशेष सलाह: पाइल्स (बवासीर) से जल्द आराम के लिए नियम
+      </div>
+
+      <div class="care-columns-row">
+        <!-- Do's Box -->
+        <div class="care-do-box">
+          <div class="care-box-title">
+            <i class="bi bi-check-circle-fill"></i> क्या करें (ज़रूर अपनाएं):
+          </div>
+          <ul class="care-list">
+            <li><i class="bi bi-check-circle-fill"></i> दिन में 8 से 10 गिलास हल्का गुनगुना पानी ज़रूर पिएं।</li>
+            <li><i class="bi bi-check-circle-fill"></i> फाइबर युक्त भोजन (सलाद, दलिया, हरी पत्तेदार सब्जियां) शामिल करें।</li>
+            <li><i class="bi bi-check-circle-fill"></i> शौच के समय अधिक जोर लगाने से बचें।</li>
+          </ul>
+        </div>
+
+        <!-- Don'ts Box -->
+        <div class="care-dont-box">
+          <div class="care-box-title">
+            <i class="bi bi-x-circle-fill"></i> क्या न करें (परहेज रखें):
+          </div>
+          <ul class="care-list">
+            <li><i class="bi bi-x-circle-fill"></i> ज्यादा तीखे, तले-भुने, मिर्च-मसालेदार और फास्ट फूड से बचें।</li>
+            <li><i class="bi bi-x-circle-fill"></i> शराब, धूम्रपान या कैफिनयुक्त खान-पान से परहेज करें।</li>
+            <li><i class="bi bi-x-circle-fill"></i> लगातार एक ही जगह बैठने या लंबे समय तक खड़े रहने से बचें।</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5: Certifications Grid -->
+    <div class="trust-cert-grid">
+      <div class="trust-cert-item">
+        <i class="bi bi-patch-check-fill"></i>
+        <span>GMP<br />Certified</span>
+      </div>
+      <div class="trust-cert-item">
+        <i class="bi bi-globe2"></i>
+        <span>ISO<br />Certified</span>
+      </div>
+      <div class="trust-cert-item">
+        <i class="bi bi-flower1"></i>
+        <span>100%<br />Ayurvedic</span>
+      </div>
+      <div class="trust-cert-item">
+        <i class="bi bi-people-fill"></i>
+        <span>10,000+<br />Happy Users</span>
+      </div>
+    </div>
+
+    <!-- Back to Main Page Button -->
+    <!-- <div class="text-center">
+      <a href="index.html" class="btn-return-landing">
+        <i class="bi bi-arrow-left"></i> मुख्य वेबसाइट पर वापस जाएँ (Back to Main Page)
+      </a>
+    </div> -->
+
+    <!-- Footer -->
+    <footer class="page-footer-strip">
+      <p><strong>Aarogya India:</strong> 100% प्रमाणित आयुर्वेदिक स्वास्थ्य समाधान • हेल्पलाइन: +91 9319719544</p>
+      <p>© 2026 Aarogya India. All Rights Reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- Dynamic Data Injection Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const name = urlParams.get('name') || sessionStorage.getItem('customer_name') || 'Chandra bhushan Kumar';
+      const phone = urlParams.get('phone') || sessionStorage.getItem('customer_phone') || '6987654678';
+
+      const nameEl = document.getElementById('displayCustName');
+      const nameReceiptEl = document.getElementById('displayCustNameReceipt');
+      const phoneReceiptEl = document.getElementById('displayCustPhoneReceipt');
+      const orderIdEl = document.getElementById('displayOrderId');
+
+      if (nameEl) nameEl.textContent = name;
+      if (nameReceiptEl) nameReceiptEl.textContent = name;
+      if (phoneReceiptEl) phoneReceiptEl.textContent = phone.startsWith('+91') ? phone : `+91 ${phone}`;
+
+      // Order ID
+      const randomNum = Math.floor(100000 + Math.random() * 900000);
+      if (orderIdEl) orderIdEl.textContent = `ORDER ID: #AI-${randomNum}`;
+    });
+  </script>
+</body>
+</html>
