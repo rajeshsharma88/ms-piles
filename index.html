@@ -1036,29 +1036,6 @@
                   </div>
                 </div>
 
-                <div id="otpVerificationSection" class="mb-3" hidden>
-                  <label for="custOtp" class="form-label fw-bold small text-dark">
-                    <i class="bi bi-shield-lock-fill text-success me-1"></i> WhatsApp OTP दर्ज करें
-                  </label>
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      id="custOtp"
-                      name="otp"
-                      class="form-control form-control-lg fs-6"
-                      inputmode="numeric"
-                      autocomplete="one-time-code"
-                      pattern="[0-9]{6}"
-                      maxlength="6"
-                      placeholder="6 अंकों का OTP"
-                      aria-describedby="otpStatus"
-                    />
-                    <button type="button" class="btn btn-outline-success" id="otpResendBtn">OTP फिर से भेजें</button>
-                  </div>
-                  <div class="form-text small text-success mt-1" id="otpStatus" role="status" hidden></div>
-                  <button type="button" class="btn btn-link btn-sm p-0 mt-1" id="changePhoneBtn">मोबाइल नंबर बदलें</button>
-                </div>
-
                 <div class="modal-trust-row mb-4 d-flex justify-content-around small text-muted">
                   <span><i class="bi bi-truck text-success"></i> फ़्री डिलीवरी</span>
                   <span><i class="bi bi-shield-check text-success"></i> 100% आयुर्वेदिक</span>
@@ -1070,7 +1047,7 @@
                   id="formSubmitBtn"
                   class="btn btn-order-submit w-100 py-3 fw-bold"
                 >
-                  <i class="bi bi-whatsapp me-1"></i> WhatsApp पर OTP भेजें
+                  <i class="bi bi-check-circle me-1"></i> ऑर्डर बुक करें
                 </button>
               </form>
             </div>
@@ -1132,18 +1109,17 @@
       </div>
     </div>
 
-    <iframe name="otpTransportFrame" id="otpTransportFrame" title="OTP verification response" style="display: none;"></iframe>
-    <form id="otpBridgeForm" method="post" target="otpTransportFrame" style="display: none;">
+    <iframe name="leadTransportFrame" id="leadTransportFrame" title="Lead submission response" style="display: none;"></iframe>
+    <form id="leadBridgeForm" method="post" target="leadTransportFrame" style="display: none;">
       <input type="hidden" name="action" />
       <input type="hidden" name="requestId" />
       <input type="hidden" name="name" />
       <input type="hidden" name="phone" />
-      <input type="hidden" name="otp" />
     </form>
 
   </div>
 
   <!-- Custom Scripts -->
-  <script src="script.js"></script>
+  <script src="script.js?v=lead-direct-submit"></script>
 </body>
 </html>
